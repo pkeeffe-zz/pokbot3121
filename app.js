@@ -18,7 +18,6 @@ var userId = '';
 var userName = '';
 var userEntity = undefined;
 
-
 var botService = new skype.ChatConnector({
     appId: APP_ID,
     appPassword: APP_SECRET
@@ -41,8 +40,9 @@ userVerification = function(session) {
         ' Type a) for Holidays, b) for Sick Leave.');
     }
     else {
-      session.send('Could not find: ' + userName +
-      ', please make sure you use proper casing :)');
+      session.send(error);
+      //session.send('Could not find: ' + userName +
+      //', please make sure you use proper casing :)');
     }
   });
 };
