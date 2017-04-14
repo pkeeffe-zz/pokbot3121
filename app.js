@@ -40,9 +40,10 @@ userVerification = function(session) {
         ' Type a) for Holidays, b) for Sick Leave.');
     }
     else {
-      session.send(error);
-      //session.send('Could not find: ' + userName +
-      //', please make sure you use proper casing :)');
+      console.error(AZURE_TABLE);
+      //session.send(error);
+      session.send('Could not find: ' + userName +
+      ', please make sure you use proper casing :)');
     }
   });
 };
